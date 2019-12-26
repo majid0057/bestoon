@@ -8,3 +8,9 @@ class expense(models.Model):
     date = models.DateTimeField()
     amount = models.BigIntegerField()
     user = models.ForeignKey(User,on_delete=models.DO_NOTHING)
+
+class income(models.Model):
+    text = models.CharField(max_length = 255)
+    date = models.DateTimeField()
+    amount = models.BigIntegerField()
+    user = models.ForeignKey(User,on_delete=models.DO_NOTHING)
